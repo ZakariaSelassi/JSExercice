@@ -30,7 +30,7 @@ class clocking {
         let time = `${this.hrs}:${this.mins}:${this.second} ${this.period}`;
         document.getElementById("clock").innerText = time;
         this.UpdateHours();
-        console.log(this.UpdateHours());
+
 
     }
 
