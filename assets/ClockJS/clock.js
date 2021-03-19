@@ -10,12 +10,12 @@ let timer = () => {
         document.getElementById("timeSentence").innerHTML = `${message}, It's currently`;
     } else if (hours >= 12 && hours < 18) {
         message = 'Good afternoon';
-
         document.getElementById("timeSentence").innerHTML = `${message}, It's currently`;
     } else {
         message = 'Good evening';
         icon.src = './img/icon-moon.svg';
         icon.setAttribute("alt", "moon");
+        document.body.style.backgroundImage = "url('./img/bg-image-nighttime.jpg')";
         document.getElementById("timeSentence").innerHTML = `${message}, It's currently`;
     }
 
@@ -35,8 +35,9 @@ let timer = () => {
 
     let timer = `${hours} :${minuts}  ${formatHours}`;
     document.getElementById("clock").innerHTML = timer;
+    setTimeout(timer, 1000);
 }
-timer();
+
 const quote = document.getElementById("sentence");
 let getSentence = () => {
     fetch('https://api.quotable.io/random')
@@ -51,5 +52,22 @@ let getSentence = () => {
             }
         })
 }
+
+let loca = document.getElementById("location");
+let getLocation = () => {
+    fetch('http://ip-api.com/json/?fields=61439')
+        .then(result => {
+            if (result.ok) {
+                result.json().then(data => {
+                    loca.innerHTML = `In ${data.city}, ${data.countryCode}`;
+                    console.log(data);
+                });
+            } else {
+                console.log("error");
+            }
+        })
+}
+getLocation();
+timer();
 getSentence();
 document.getElementById('refresh').addEventListener('click', getSentence);
