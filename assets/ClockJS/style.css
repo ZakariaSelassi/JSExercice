@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(0.5px);
     color: white;
     font-weight: bolder;
     font-family: "Inter", sans-serif;

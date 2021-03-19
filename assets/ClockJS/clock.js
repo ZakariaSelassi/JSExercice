@@ -45,7 +45,7 @@ let getSentence = () => {
             if (result.ok) {
                 result.json().then(data => {
                     quote.innerHTML = data.content;
-                    console.log(data);
+
                 });
             } else {
                 console.log("error");
@@ -60,6 +60,19 @@ let getLocation = () => {
             if (result.ok) {
                 result.json().then(data => {
                     loca.innerHTML = `In ${data.city}, ${data.countryCode}`;
+
+                });
+            } else {
+                console.log("error");
+            }
+        })
+}
+
+let getGMT = () => {
+    fetch('https://worldtimeapi.org/api/ip')
+        .then(result => {
+            if (result.ok) {
+                result.json().then(data => {
                     console.log(data);
                 });
             } else {
@@ -67,6 +80,7 @@ let getLocation = () => {
             }
         })
 }
+getGMT();
 getLocation();
 timer();
 getSentence();
