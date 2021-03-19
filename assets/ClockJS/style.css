@@ -10,23 +10,40 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: grey;
+    backdrop-filter: blur(2.5px);
     color: white;
-    font-size: 20px;
     font-weight: bolder;
     font-family: "Inter", sans-serif;
 }
 
-#clock {}
-
 main {
+    padding: 0.5rem 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid violet;
+    width: 100%;
+    height: 100vh;
+}
+
+.sentenceWrapper {
     display: flex;
     flex-direction: row;
     border: 1px solid red;
-    padding: 5rem 15rem;
+    width: 50%;
 }
 
-button {
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detailsDays {
+    font-size: 2rem;
+}
+
+#refresh {
     margin-left: 1rem;
     border: transparent;
     background: none;
@@ -35,4 +52,22 @@ button {
 
 button span {
     color: grey;
+}
+
+.showContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.show {
+    border-radius: 5rem;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 2rem 5rem;
+}
+
+#clock {
+    font-size: 50px;
 }
