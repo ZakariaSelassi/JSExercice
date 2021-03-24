@@ -87,13 +87,18 @@ button span {
 .panelCurrent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    padding: 5rem;
+    grid-gap: 50px;
     font-size: 30px;
     color: black;
 }
 
 .panelCurrent h2 {
     text-transform: uppercase;
+}
+
+.panelCurrent p {
+    line-height: 5rem;
 }
 
 
@@ -113,16 +118,17 @@ button span {
 }*/
 
 .secondContainer {
-    background: pink;
-    height: 300px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(40.7742px);
+    height: auto;
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: translateY(400px);
+    transform: translateY(600px);
 }
 
 .transform {
-    transform: translateY(-250px);
+    transform: translateY(-400px);
     transition: 2s;
 }
 

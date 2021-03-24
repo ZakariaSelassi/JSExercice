@@ -92,7 +92,13 @@ let show = () => {
     let det = document.querySelector(".details").classList.toggle('transform');
     document.querySelector('.firstContainer').classList.toggle('transform');
     document.querySelector('.secondContainer').classList.toggle('transform2');
-
+    let btn = document.querySelector('.show');
+    if (btn.firstChild.nodeValue === "MORE") {
+        btn.firstChild.nodeValue = "LESS";
+        console.log(btn.firstChild.nodeValue);
+    } else {
+        btn.firstChild.nodeValue = "MORE";
+    }
 }
 
 getGMT();
