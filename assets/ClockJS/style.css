@@ -10,27 +10,33 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    backdrop-filter: blur(0.5px);
+    backdrop-filter: sepia(19%) brightness(69%);
     color: white;
     font-weight: bolder;
     font-family: "Inter", sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
-main {
+.firstContainer {
     padding: 0.5rem 15rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 1px solid violet;
     width: 100%;
     height: 100vh;
+    position: absolute;
 }
 
 .sentenceWrapper {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
     width: 50%;
+}
+
+#sentence {
+    font-size: 30px;
 }
 
 .details {
@@ -48,6 +54,12 @@ main {
     border: transparent;
     background: none;
     font-size: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 button span {
@@ -69,5 +81,52 @@ button span {
 }
 
 #clock {
-    font-size: 50px;
+    font-size: 100px;
+}
+
+.panelCurrent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    font-size: 30px;
+    color: black;
+}
+
+.panelCurrent h2 {
+    text-transform: uppercase;
+}
+
+
+/*.panelCurrent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.panelWeek {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}*/
+
+.secondContainer {
+    background: pink;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(400px);
+}
+
+.transform {
+    transform: translateY(-250px);
+    transition: 2s;
+}
+
+.transform2 {
+    transform: translateY(0px);
+    transition: 0.8s;
 }

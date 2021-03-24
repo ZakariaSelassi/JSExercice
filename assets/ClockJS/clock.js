@@ -21,7 +21,7 @@ let timer = () => {
 
     // Fixe 0 missing before 10.
     minuts = minuts < 10 ? "0" + minuts : minuts;
-    hours = hours < 10 ? "0" + hours : hours;
+
     // AM or PM
 
     if (hours > 12) {
@@ -67,21 +67,38 @@ let getLocation = () => {
             }
         })
 }
-
+let current = document.querySelector(".currentTime");
+let dayWeek = document.querySelector(".currentWeek");
+let dYear = document.querySelector(".currentYear");
+let nWeek = document.querySelector(".currentNumber");
 let getGMT = () => {
     fetch('https://worldtimeapi.org/api/ip')
         .then(result => {
             if (result.ok) {
                 result.json().then(data => {
                     console.log(data);
+                    current.innerHTML = data.timezone;
+                    dayWeek.innerHTML = data.day_of_week;
+                    dYear.innerHTML = data.day_of_year;
+                    nWeek.innerHTML = data.week_number;
+
                 });
             } else {
                 console.log("error");
             }
         })
 }
+let show = () => {
+    let det = document.querySelector(".details").classList.toggle('transform');
+    document.querySelector('.firstContainer').classList.toggle('transform');
+    document.querySelector('.secondContainer').classList.toggle('transform2');
+
+}
+
 getGMT();
 getLocation();
 timer();
 getSentence();
+
 document.getElementById('refresh').addEventListener('click', getSentence);
+document.querySelector(".show").addEventListener("click", show);
