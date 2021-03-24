@@ -93,6 +93,10 @@ button span {
     color: black;
 }
 
+.item {
+    padding-left: 10rem;
+}
+
 .panelCurrent h2 {
     text-transform: uppercase;
 }
