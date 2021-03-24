@@ -13,9 +13,9 @@ let timer = () => {
         document.getElementById("timeSentence").innerHTML = `${message}, It's currently`;
     } else {
         message = 'Good evening';
-        icon.src = './img/icon-moon.svg';
+        icon.src = './assets/img/icon-moon.svg';
         icon.setAttribute("alt", "moon");
-        document.body.style.backgroundImage = "url('./img/bg-image-nighttime.jpg')";
+        document.body.style.backgroundImage = "url('./assets/img/bg-image-nighttime.jpg')";
         document.getElementById("timeSentence").innerHTML = `${message}, It's currently`;
     }
 

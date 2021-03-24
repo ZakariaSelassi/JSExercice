@@ -3,4 +3,4 @@
 
 ## Design (from Frontend Mentor) :
 
-![design Time application](./assets/preview.jpg)
+![design Time application](./assets/img/preview.jpg)
