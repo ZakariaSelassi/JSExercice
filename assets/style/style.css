@@ -87,7 +87,7 @@ button span {
 .panelCurrent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5rem;
+    padding: 2rem;
     grid-gap: 50px;
     font-size: 30px;
     color: black;
@@ -112,15 +112,15 @@ button span {
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: translateY(200px);
+    transform: translateY(600px);
 }
 
 .transform {
-    transform: translateY(-100px);
+    transform: translateY(-400px);
     transition: 2s;
 }
 
 .transform2 {
     transform: translateY(0px);
-    transition: 2s;
+    transition: 0.8s;
 }
