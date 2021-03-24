@@ -89,7 +89,7 @@ button span {
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
     grid-gap: 50px;
-    font-size: 30px;
+    font-size: 20px;
     color: black;
 }
 
@@ -112,15 +112,19 @@ button span {
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: translateY(600px);
+    transform: translateY(350px);
 }
 
 .transform {
-    transform: translateY(-400px);
+    transform: translateY(-150px);
     transition: 2s;
 }
 
 .transform2 {
     transform: translateY(0px);
     transition: 0.8s;
+}
+
+.textHide {
+    opacity: 0;
 }

@@ -92,6 +92,8 @@ let show = () => {
     let det = document.querySelector(".details").classList.toggle('transform');
     document.querySelector('.firstContainer').classList.toggle('transform');
     document.querySelector('.secondContainer').classList.toggle('transform2');
+    document.getElementById("sentence").classList.toggle('textHide');
+    document.getElementById("refresh").classList.toggle('textHide');
     let btn = document.querySelector('.show');
     if (btn.firstChild.nodeValue === "MORE") {
         btn.firstChild.nodeValue = "LESS";
