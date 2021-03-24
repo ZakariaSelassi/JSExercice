@@ -1,3 +1,10 @@
+let current = document.querySelector(".currentTime");
+let dayWeek = document.querySelector(".currentWeek");
+let dYear = document.querySelector(".currentYear");
+let nWeek = document.querySelector(".currentNumber");
+let quote = document.getElementById("sentence");
+let loca = document.getElementById("location");
+
 let timer = () => {
     let time = new Date();
     let hours = time.getHours();
@@ -38,7 +45,7 @@ let timer = () => {
     setTimeout(timer, 1000);
 }
 
-const quote = document.getElementById("sentence");
+
 let getSentence = () => {
     fetch('https://api.quotable.io/random')
         .then(result => {
@@ -53,7 +60,7 @@ let getSentence = () => {
         })
 }
 
-let loca = document.getElementById("location");
+
 let getLocation = () => {
     fetch('http://ip-api.com/json/?fields=61439')
         .then(result => {
@@ -67,10 +74,8 @@ let getLocation = () => {
             }
         })
 }
-let current = document.querySelector(".currentTime");
-let dayWeek = document.querySelector(".currentWeek");
-let dYear = document.querySelector(".currentYear");
-let nWeek = document.querySelector(".currentNumber");
+
+
 let getGMT = () => {
     fetch('https://worldtimeapi.org/api/ip')
         .then(result => {
