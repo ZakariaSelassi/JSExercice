@@ -18,5 +18,5 @@ What I've used ?
 AND voila ...
 
 
-Want to see my work  ?  :heart_eyes: [Clock App](https://zakariaselassi.github.io/JSExercice/)
+Want to see my work ?  :heart_eyes: [Clock App](https://zakariaselassi.github.io/JSExercice/)
 
